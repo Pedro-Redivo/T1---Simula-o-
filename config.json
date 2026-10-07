@@ -1,0 +1,16 @@
+{
+  "semente": 12345,
+  "total_aleatorios": 100000,
+  "primeira_chegada": 2.0,
+  "chegada_externa": {"fila": "F1", "min": 2, "max": 4},
+  "filas": {
+    "F1": {"servidores": 1, "capacidade": null, "atend_min": 1, "atend_max": 2},
+    "F2": {"servidores": 2, "capacidade": 5,    "atend_min": 4, "atend_max": 6},
+    "F3": {"servidores": 2, "capacidade": 10,   "atend_min": 5, "atend_max": 15}
+  },
+  "rede": {
+    "F1": [["F2", 0.2], ["F3", 0.8]],
+    "F2": [["F1", 0.3], ["F3", 0.5], [null, 0.2]],
+    "F3": [["F2", 0.7], [null, 0.3]]
+  }
+}
